@@ -16,12 +16,9 @@ typealias NANException = FormatException
 /**
  * Complete these two functions.
  */
-fun parseInt(value: String): Int =
-        try { value.toInt() } catch (e: /*TODO*/) { /*TODO*/ }
+fun parseInt(value: String): Int = try { value.toInt()} catch (e: NumberFormatException) {notANumber()}
 
-
-
-fun notANumber() : /*TODO*/ = throw /**/("Not a number")
+fun notANumber(): Nothing = throw NANException("Not a valid number !!")
 
 
 

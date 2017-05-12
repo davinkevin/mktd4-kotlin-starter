@@ -7,17 +7,17 @@
 /**
  * Return the Integer 0
  */
-fun shouldReturn0Int(): Int = TODO()
+fun shouldReturn0Int(): Int = 0
 
 /**
  * Return the Integer 0 if @param isNull is false, null otherwise
  */
-fun shouldReturn0OrNull(isNull:Boolean): Int? = TODO()
+fun shouldReturn0OrNull(isNull:Boolean): Int? = if (isNull) null else 0
 
 /**
  * Return the string "OK"
  */
-fun shouldReturnOK(): String = TODO()
+fun shouldReturnOK(): String = "OK"
 
 
 

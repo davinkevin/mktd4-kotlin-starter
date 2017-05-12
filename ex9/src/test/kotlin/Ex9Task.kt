@@ -16,16 +16,23 @@ import util.Move
  * 5-6 ->NONE;
  * other -> null
  */
-fun findMoveUsingInt(value:Int): Move? =TODO()
-
+fun findMoveUsingInt(value:Int): Move? =
+            when (value) {
+                0 -> Move.NORTH
+                in 1..2 -> Move.SOUTH
+                3 -> Move.WEST
+                4 -> Move.EAST
+                in 5..6 -> Move.NONE
+                else -> null
+        }
 /**
  * Using When expression return the relevant Integer
  */
 
 fun eval(expr: Expr): Int =
         when (expr) {
-            is Num -> TODO()
-            is Sum -> TODO()
+            is Num -> expr.value
+            is Sum -> eval(expr.left) + eval(expr.right)
             else -> throw IllegalArgumentException("Unknown expression")
         }
 

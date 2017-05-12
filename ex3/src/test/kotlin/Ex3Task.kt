@@ -9,23 +9,23 @@ import util.Player
 /**
  * return the player score or 0 using one line syntax and if operator
  */
-fun getPlayerScoreUsingIf(player: Player?): Int = TODO()
+fun getPlayerScoreUsingIf(player: Player?): Int = if (player?.score != null) player.score!! else 0
 
 
 /**
  * return the player score or 0 using one line syntax and elvis operator
  */
-fun getPlayerScoreUsingElvis(player: Player?): Int = TODO()
+fun getPlayerScoreUsingElvis(player: Player?): Int = player?.score ?: 0
 
 
 /**
  * return the player score.
  */
-fun trustMeAndReturnScore(player: Player?): Int = TODO()
+fun trustMeAndReturnScore(player: Player?): Int = player?.score!!
 
 /**
  * Cast the @param arg to Int and return its value or 0 if it's not an Int
  */
-fun anyToInt(arg: Any?): Int = TODO()
+fun anyToInt(arg: Any?): Int = arg as? Int ?: 0
 
 

@@ -9,13 +9,21 @@ package io.monkeypatch.mktd4.ex5
  */
 
 class LazyProperty(val initializer: () -> Int) {
-    /* TODO */
+    private var number: Int? = null
+
+    val lazy: Int
+        get() {
+            if (number == null) {
+                number = initializer()
+            }
+            return number!!
+        }
 
 }
 
 class DelegateProperty(val initializer: () -> Int) {
 
-    val lazyValue: Int by /* TODO */
+    val lazyValue: Int by lazy(initializer)
 }
 
 

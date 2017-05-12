@@ -8,3 +8,7 @@
  * Go to Tools/Kotlin and display the bytecode
  *
  */
+
+class MyJavaClass(var myValue: String?)
+
+

@@ -16,7 +16,7 @@ package io.monkeypatch.mktd4.ex6
  * It can be called on a collection of Strings. Specifying only two arguments make the function joinOptions() return the list in a JSON format (e.g., "[a, b, c]")
  */
 fun joinOptions(options: Collection<String>) = options.joinToString(
-        /*TODO*/
+        ", ", "[", "]"
 )
 
 /**
@@ -24,5 +24,4 @@ fun joinOptions(options: Collection<String>) = options.joinToString(
  *
  * Read about @see <a href="https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs">Variable number of arguments</a>
  */
-fun joinVarArgsOptions(
-        /*TODO*/
+fun joinVarArgsOptions(vararg args: String) = joinOptions(args.toList())
